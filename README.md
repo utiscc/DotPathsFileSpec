@@ -6,9 +6,9 @@ This is a proposal for using the `.paths` file extension for particular file con
 
 This document is currently WIP.
 
-## Programs that support the format (in alphabetical order)
+## Programs that currently support this file format (in alphabetical order)
 
-- [Find Any File](http://findanyfile.app/) (macOS)
+- [Find Any File](http://findanyfile.app/) (macOS), since v2.3
 - Scherlokk (macOS)
 
 ## Program proposals
