@@ -68,4 +68,3 @@ And this document should provide the exact plist declarations for exporting the 
 
 - BBEdit (macOS)
 - FileBuddy (macOS)
-- Alifix (macOS)
