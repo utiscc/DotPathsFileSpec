@@ -4,7 +4,7 @@ Specification for the ".paths" file extension
 
 This is a proposal for using the `.paths` file extension for particular file content, sharable between a wide range of programs that process a bunch of files (and folders etc.).
 
-This document is currently WIP.
+This document is currently a WIP.
 
 ## Semantics (Protocol)
 
@@ -49,6 +49,12 @@ Pretty obvious, really, but the rules above (handling of 00 bytes, optional comm
 The UTI would conform to `public.utf8-plain-text`
 
 For the UTI name itself, I like to come up with something that's not bound to anyone's own domain. Ideally, we'd register one with Apple under "public." but that's unlikely to happen.
+
+The name should either end in ".paths" or ".posix-paths". I prefer the latter because its more specific and opens the possibility for other competing formats.
+
+OTOH, since this is mainly about the semantics (i.e. opening the contents in a browser or processing them as files), we might even declare an intermediate UTI: There would be a "….paths" that defines the general semantics as outlined in this proposal, and then there's a specific "….posix-paths" that is for POSIX paths. That would allow the use of other file reference methods as well, e.g. with bookmark data, in a binary format, etc., all with specific UTIs that all conform to "….paths".
+
+Heck, since it's the semantics that matter, we could even call it "….browsable" or "….file-list".
 
 So, here are some suggestions:
 
