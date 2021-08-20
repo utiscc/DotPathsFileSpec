@@ -46,12 +46,18 @@ Pretty obvious, really, but the rules above (handling of 00 bytes, optional comm
 
 ## UTI
 
-Suggestions:
+The UTI would conform to `public.utf8-plain-text`
 
-* public.posix-paths
-* common.posix-paths
+For the UTI name itself, I like to come up with something that's not bound to anyone's own domain. Ideally, we'd register one with Apple under "public." but that's unlikely to happen.
 
-Also, add this to https://en.wikipedia.org/wiki/Uniform_Type_Identifier
+So, here are some suggestions:
+
+* public.posix-paths (this would be rogue because Apple reserves the right to name "public." for themselves only)
+* common.posix-paths (there is no "common" domain, but so it would be safe)
+
+Also, once decided, we should add this to https://en.wikipedia.org/wiki/Uniform_Type_Identifier
+
+And this document should provide the exact plist declarations for exporting the types so that everyone adopting it gets it right.
 
 ## Programs that currently support this file format (in alphabetical order)
 
