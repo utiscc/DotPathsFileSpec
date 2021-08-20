@@ -6,6 +6,15 @@ This is a proposal for using the `.paths` file extension for particular file con
 
 This document is currently WIP.
 
+## UTI
+
+Suggestions:
+
+* public.posix-paths
+* common.posix-paths
+
+Also, add this to https://en.wikipedia.org/wiki/Uniform_Type_Identifier
+
 ## Programs that currently support this file format (in alphabetical order)
 
 - [Find Any File](http://findanyfile.app/) (macOS), since v2.3
