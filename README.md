@@ -66,5 +66,5 @@ And this document should provide the exact plist declarations for exporting the 
 
 ## Program proposals (i.e. I/we contacted them or plan to do so)
 
-- BBEdit (macOS)
-- FileBuddy (macOS)
+- [BBEdit](https://www.barebones.com/products/bbedit/) (macOS)
+- [FileBuddy](https://www.skytag.com) (macOS)
