@@ -28,7 +28,7 @@ Example: Find Any File (FAF) finds files and shows them in a browser window, sim
 
 ## Format specs
 
-Roughly, the .paths format is a plain text (UTF-8, with optional [BOM](https://en.wikipedia.org/wiki/Byte_order_mark)) file with each line following these rules:
+Roughly, the .paths format is a plain text file (UTF-8, without [BOM](https://en.wikipedia.org/wiki/Byte_order_mark)) with each line following these rules:
 
 - empty -> ignore
 - starts with "/" -> interpret as POSIX path
@@ -48,22 +48,18 @@ Pretty obvious, really, but the rules above (handling of 00 bytes, optional comm
 
 The UTI would conform to `public.utf8-plain-text`
 
-For the UTI name itself, I like to come up with something that's not bound to anyone's own domain. Ideally, we'd register one with Apple under "public." but that's unlikely to happen.
+The domain "utis.cc" has been acquired for this (until mid-2026 for now). Thomas Tempelmann and Rich Siegel have access to the registrar login.
 
-The name should either end in ".paths" or ".posix-paths". I prefer the latter because its more specific and opens the possibility for other competing formats.
+The subdomain still needs deciding. I've proposed:
 
-OTOH, since this is mainly about the semantics (i.e. opening the contents in a browser or processing them as files), we might even declare an intermediate UTI: There would be a "….paths" that defines the general semantics as outlined in this proposal, and then there's a specific "….posix-paths" that is for POSIX paths. That would allow the use of other file reference methods as well, e.g. with bookmark data, in a binary format, etc., all with specific UTIs that all conform to "….paths".
-
-Heck, since it's the semantics that matter, we could even call it "….browsable" or "….file-list".
-
-So, here are some suggestions:
-
-* public.posix-paths (this would be rogue because Apple reserves the right to name "public." for themselves only)
-* common.posix-paths (there is no "common" domain, but so it would be safe)
+- cc.utis.paths
+- cc.utis.posix-paths
+- cc.utis.file-paths
+- cc.utis.paths-file
 
 Also, once decided, we should add this to https://en.wikipedia.org/wiki/Uniform_Type_Identifier
 
-And this document should provide the exact plist declarations for exporting the types so that everyone adopting it gets it right.
+And this document should provide the exact plist declarations for exporting the types so that everyone adopting it gets it right by simply copying them to their app's Info.plist.
 
 ## Programs that currently support this file format (in alphabetical order)
 
