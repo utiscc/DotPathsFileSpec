@@ -18,7 +18,7 @@ But what if the user wants to have the app's browser show the list of files, ins
 
 If the app is asked to open a .paths file, it should default to showing the items in its browser instead of opening them as invidual items or as a text document.
 
-For instance, a text editor like BBEDit, which can both edit text files and also show a file browser for a set of files, opening a .paths file should give the user the option to either edit the file as a text document or list the referenced files in its file browser. How BBEdit provides this choice to the user is not part of the proposal, though.
+For instance, a text editor like BBEdit, which can both edit text files and also show a file browser for a set of files, opening a .paths file should give the user the option to either edit the file as a text document or list the referenced files in its file browser. How BBEdit provides this choice to the user is not part of the proposal, though.
 
 For programs that cannot view/edit text files, opening a .paths file is even clearer: It's meant to read the file paths from it and then process them in a way that makes sense for that program. For instance, a file renamer would then take the list and process them all by renaming them as the user wishes.
 
