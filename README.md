@@ -28,7 +28,7 @@ Example: Find Any File (FAF) finds files and shows them in a browser window, sim
 
 ## Format specs
 
-Roughly, the .paths format is a plain text file (UTF-8, without [BOM](https://en.wikipedia.org/wiki/Byte_order_mark)) with each line following these rules:
+Roughly, the .paths format is a plain text file (UTF-8, _without_ [BOM](https://en.wikipedia.org/wiki/Byte_order_mark)) with each line following these rules:
 
 - empty -> ignore
 - starts with "/" -> interpret as POSIX path
@@ -46,20 +46,11 @@ Pretty obvious, really, but the rules above (handling of 00 bytes, optional comm
 
 ## UTI
 
-The UTI would conform to `public.utf8-plain-text`
+The UTI shall conform to `public.utf8-plain-text`
 
 The domain "utis.cc" has been acquired for this (until mid-2026 for now). Thomas Tempelmann and Rich Siegel have access to the registrar login.
 
-The subdomain still needs deciding. I've proposed:
-
-- cc.utis.paths
-- cc.utis.posix-paths
-- cc.utis.file-paths
-- cc.utis.paths-file
-
-Also, once decided, we should add this to https://en.wikipedia.org/wiki/Uniform_Type_Identifier
-
-And this document should provide the exact plist declarations for exporting the types so that everyone adopting it gets it right by simply copying them to their app's Info.plist.
+The UTI for this is therefore: `cc.utis.paths-file`
 
 ## Programs that currently support this file format (in alphabetical order)
 
