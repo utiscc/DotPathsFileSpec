@@ -61,3 +61,7 @@ The UTI for this is therefore: `cc.utis.paths-file`
 
 - [BBEdit](https://www.barebones.com/products/bbedit/) (macOS)
 - [FileBuddy](https://www.skytag.com) (macOS)
+
+## Homepage of utis.cc
+
+See [utis.cc](http://utis.cc) for the main anchor of all things related to UTIs.
