@@ -52,6 +52,59 @@ The domain "utis.cc" has been acquired for this (until mid-2026 for now). Thomas
 
 The UTI for this is therefore: `cc.utis.paths-file`
 
+## Info.plist contents
+
+This is an example how your `Info.plist` entries should be set up (hint: you can edit binary plist files with BBEdit).
+
+```
+	<key>UTExportedTypeDeclarations</key>
+	<array>
+		<dict>
+			<key>UTTypeConformsTo</key>
+			<array>
+				<string>public.utf8-plain-text</string>
+			</array>
+			<key>UTTypeDescription</key>
+			<string>POSIX Paths File</string>
+			<key>UTTypeIdentifier</key>
+			<string>cc.utis.paths-file</string>
+			<key>UTTypeReferenceURL</key>
+			<string>https://github.com/utiscc/DotPathsFileSpec</string>
+			<key>UTTypeTagSpecification</key>
+			<dict>
+				<key>public.filename-extension</key>
+				<array>
+					<string>paths</string>
+				</array>
+			</dict>
+		</dict>
+	</array>
+```
+
+Note that we don't supply an icon (yet). If you have one specific for your app, you'd also add an `UTTypeIconFile` pointing to the icns file.
+
+```
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeExtensions</key>
+			<array>
+				<string>paths</string>
+			</array>
+			<key>CFBundleTypeName</key>
+			<string>POSIX Paths File</string>
+			<key>CFBundleTypeRole</key>
+			<string>... use "Editor" (if you can write) or "Viewer" (if you can only read) here ...</string>
+			<key>LSItemContentTypes</key>
+			<array>
+				<string>cc.utis.paths-file</string>
+			</array>
+			<key>NSDocumentClass</key>
+			<string>...fill in your own if you use NSDocument to manage files, or else remove this key-value pair entirely...</string>
+		</dict>
+	</array>
+```
+
 ## Programs that currently support this file format (in alphabetical order)
 
 - [Find Any File](http://findanyfile.app/) (macOS), since v2.3
