@@ -2,21 +2,19 @@
 
 Specification for the ".paths" file extension
 
-This is a proposal for using the `.paths` file extension for particular file content, sharable between a wide range of programs that process a bunch of files (and folders etc.).
-
-This document is currently a WIP.
+This is a proposal for using the `.paths` file extension for specific file content, sharable between a wide range of programs that process a bunch of files (and folders etc.).
 
 ## Semantics (Protocol)
 
-If an app supports opening .paths files, then it shall treat them as a set of files for _browsing_, as opposed to _opening_ them.
+If an app supports opening `.paths` files, then it shall treat them as a set of files for _browsing_, as opposed to _opening_ them.
 
 This is useful for any program that provides a file browser. If the app can also open certain documents for purpose of viewing or editing them, then, by default, it would always do so with any file it's asked to open.
 
-So, if the user had a list of files, e.g. collected in Finder, and would then drag them to the app, or double click them, the app would open each file as a document, usually.
+Let's assume the user has a list of files, e.g. collected in Finder, and then drags them to an app, or double click them. The app would then open each file as a document, by default.
 
-But what if the user wants to have the app's browser show the list of files, instead? Currently, there is no protocol for this – and that's what this protocol is about:
+But what if the user wants to have the app's browser show the list of files, instead? Currently, there is no protocol for this – and that's what this proposal is about:
 
-If the app is asked to open a .paths file, it should default to showing the items in its browser instead of opening them as invidual items or as a text document.
+**If the app is asked to open a .paths file, it should default to showing the items in its browser instead of opening them as invidual items or as a text document.**
 
 For instance, a text editor like BBEdit, which can both edit text files and also show a file browser for a set of files, opening a .paths file should give the user the option to either edit the file as a text document or list the referenced files in its file browser. How BBEdit provides this choice to the user is not part of the proposal, though.
 
