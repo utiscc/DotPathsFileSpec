@@ -96,6 +96,7 @@ Note that we don't supply an icon (yet). If you have one specific for your app, 
 			<key>LSItemContentTypes</key>
 			<array>
 				<string>cc.utis.paths-file</string>
+				<string>posix.paths</string>
 			</array>
 			<key>NSDocumentClass</key>
 			<string>...fill in your own if you use NSDocument to manage files, or else remove this key-value pair entirely...</string>
