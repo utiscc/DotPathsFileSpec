@@ -14,7 +14,7 @@ Let's assume the user has a list of files, e.g. collected in Finder, and then dr
 
 But what if the user wants to have the app's browser show the list of files, instead? Currently, there is no protocol for this – and that's what this proposal is about:
 
-**If the app is asked to open a .paths file, it should default to showing the items in its browser instead of opening them as invidual items or as a text document.**
+**If the app is asked to open a .paths file, it should default to showing the items in its browser instead of opening them as individual items or as a text document.**
 
 For instance, a text editor like BBEdit, which can both edit text files and also show a file browser for a set of files, opening a .paths file should give the user the option to either edit the file as a text document or list the referenced files in its file browser. How BBEdit provides this choice to the user is not part of the proposal, though.
 
