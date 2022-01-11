@@ -107,10 +107,10 @@ Note that we don't supply an icon (yet). If you have one specific for your app, 
 
 - [Find Any File](http://findanyfile.app/) (macOS), since v2.3
 - [Scherlokk](https://naarakstudio.com/scherlokk/) (macOS)
+- [BBEdit](https://www.barebones.com/products/bbedit/) (macOS), since v14.1
 
 ## Program proposals (i.e. I/we contacted them or plan to do so)
 
-- [BBEdit](https://www.barebones.com/products/bbedit/) (macOS)
 - [FileBuddy](https://www.skytag.com) (macOS)
 
 ## Homepage of utis.cc
