@@ -29,16 +29,16 @@ Example: Find Any File (FAF) finds files and shows them in a browser window, sim
 Roughly, the .paths format is a plain text file (UTF-8, _without_ [BOM](https://en.wikipedia.org/wiki/Byte_order_mark)) with each line following these rules:
 
 - empty -> ignore
+- starts with "#" -> handle as user-readable comment (not necessarily to be shown to the user by your parser)
+- starts with "{" ->  interpret as JSON string. Content is currently private, so if you use this, add an identifier that allows you to detect whether you understand its contents. And the entire JSON string needs to be in a single line!
 - starts with "/" -> interpret as POSIX path
 - starts with "~" -> interpret as POSIX path, replacing the leading ~ with the user's home folder
-- starts with "#" -> handle as user-readable comment
-- starts with "{" ->  interpret as JSON string. Content is currently private, so if you use this, add an identifier that allows you to detect whether you understand its contents. And the entire JSON string needs to be in a single line!
 
 Ignore anything else (i.e. don't complain to the user about lines in an unexpected format).
 
-Also, if the file contains a 00-byte, then assume that the lines are separated by 00-bytes (as from output of many cmdline tools with the "-0" option), otherwise assume LF as line separator (note that, at least on macOS, CRs are allowed in file names, such as for the infamous "Icon␍" file names).
+Also, if the file contains at least one 00-byte, then assume that the lines are separated by 00-bytes (as from output of many cmdline tools with the "-0" option), otherwise assume LF as line separator (note that, at least on macOS, CRs are allowed in file names, such as for the infamous "Icon␍" file names, hence do not ignore CRs nor treat them as line delimiters).
 
-That's about it. The format is therefore suited to be generated from the output of many cmdline tools that list file paths, and is easily user-readable as well.
+That's it. The format is therefore suited to be generated from the output of many cmdline tools that list file paths, and is easily user-readable as well.
 
 Pretty obvious, really, but the rules above (handling of 00 bytes, optional comments and support for "~", and silently ignoring unknown lines) make sure that it's suitable for a lot of applications. For instance, FindAnyFile only writes the full paths to the file, whereas Scherlokk also writes some info about the search parameters into the first line, in JSON form. That way, Scherlokk uses this format to Save a result, and if the user later reopens the file, he'll not only get the results back but also gets the search parameters filled into the UI again.
 
@@ -53,6 +53,8 @@ The UTI for this is therefore: `cc.utis.paths-file`
 ## Info.plist contents
 
 This is an example how your `Info.plist` entries should be set up (hint: you can edit binary plist files with BBEdit).
+
+This is to declare that the extension `paths` has the UTI `cc.utis.paths-file`, so that Finder can show the appropriate type (kind):
 
 ```
 	<key>UTExportedTypeDeclarations</key>
@@ -80,6 +82,8 @@ This is an example how your `Info.plist` entries should be set up (hint: you can
 ```
 
 Note that we don't supply an icon (yet). If you have one specific for your app, you'd also add an `UTTypeIconFile` pointing to the icns file.
+
+And this is for letting Finder (i.e. Launch Services) know that your app can open these `paths` files:
 
 ```
 	<key>CFBundleDocumentTypes</key>
