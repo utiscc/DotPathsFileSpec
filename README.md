@@ -109,9 +109,10 @@ And this is for letting Finder (i.e. Launch Services) know that your app can ope
 
 ## Programs that currently support this file format (in alphabetical order)
 
-- [Find Any File](http://findanyfile.app/) (macOS), since v2.3
-- [Scherlokk](https://naarakstudio.com/scherlokk/) (macOS)
 - [BBEdit](https://www.barebones.com/products/bbedit/) (macOS), since v14.1
+- [Find Any File](http://findanyfile.app/) (macOS), since v2.3
+- [Mp3tag](https://mp3tag.app) (macOS), since v1.4.2
+- [Scherlokk](https://naarakstudio.com/scherlokk/) (macOS)
 
 ## Program proposals (i.e. I/we contacted them or plan to do so)
 
