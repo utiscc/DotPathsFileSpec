@@ -63,6 +63,7 @@ This is to declare that the extension `paths` has the UTI `cc.utis.paths-file`, 
 			<key>UTTypeConformsTo</key>
 			<array>
 				<string>public.utf8-plain-text</string>
+				<string>public.content</string>
 			</array>
 			<key>UTTypeDescription</key>
 			<string>POSIX Paths File</string>
