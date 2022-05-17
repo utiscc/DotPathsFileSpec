@@ -82,6 +82,8 @@ This is to declare that the extension `paths` has the UTI `cc.utis.paths-file`, 
 	</array>
 ```
 
+(If you only read .paths files but not write them, you should probably import instead of export this type, i.e. by using `UTImportedTypeDeclarations` instead of `UTExportedTypeDeclarations`.)
+
 Note that we don't supply an icon (yet). If you have one specific for your app, you'd also add an `UTTypeIconFile` pointing to the icns file.
 
 And this is for letting Finder (i.e. Launch Services) know that your app can open these `paths` files:
@@ -107,6 +109,8 @@ And this is for letting Finder (i.e. Launch Services) know that your app can ope
 		</dict>
 	</array>
 ```
+
+For more details and examples on declaring this and other custom UTIs, see [this WWDC 2021 Tech Talk](https://developer.apple.com/videos/play/tech-talks/10696).
 
 ## Programs that currently support this file format (in alphabetical order)
 
