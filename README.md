@@ -44,7 +44,7 @@ Pretty obvious, really, but the rules above (handling of 00 bytes, optional comm
 
 ## UTI
 
-The UTI shall conform to `public.utf8-plain-text`
+The UTI shall conform to `public.utf8-plain-text` (and to `public.content`, see [WWDC 2021 Tech Talk at 12:57](https://developer.apple.com/videos/play/tech-talks/10696)).
 
 The domain "utis.cc" has been acquired for this (until mid-2026 for now). Thomas Tempelmann and Rich Siegel have access to the registrar login.
 
